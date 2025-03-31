@@ -83,7 +83,7 @@
                   }
                   ?>
                   <li class="nav-item pr-2 pl-2">
-                    <a class="nav-link active" aria-current="page" href="leads.html">Home</a>
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                   </li>
                   
                 <!--<form class="d-flex" role="search">
