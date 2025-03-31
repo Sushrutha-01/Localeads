@@ -1,0 +1,58 @@
+<?php
+session_start();
+
+// Check if the user is logged in
+if (!isset($_SESSION['user_id'])) {
+    header('Location: login.php'); // Redirect to login page if not logged in
+    exit();
+}
+
+// Database connection
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "localeads";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Handle form submission
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $user_id = $_SESSION['user_id'];
+    $query_text = $_POST['query_text'];
+
+    // Insert the query into the database
+    $sql = "INSERT INTO queries (user_id, query_text) VALUES ('$user_id', '$query_text')";
+    if ($conn->query($sql) === TRUE) {
+        $message = "Query sent successfully. Thank you!";
+    } else {
+        $message = "Error: " . $sql . "<br>" . $conn->error;
+    }
+}
+
+$conn->close();
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Query Form</title>
+</head>
+<body>
+
+<?php if (isset($message)) : ?>
+    <script>alert('<?php echo $message; ?>');</script>
+<?php endif; ?>
+
+<form method="post" action="query_form.php">
+    <label for="query_text">Your Query:</label><br>
+    <textarea name="query_text" rows="4" cols="50" required></textarea><br><br>
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
+<textarea name="review" id="review" cols="55" rows="12" placeholder="Type your query                                                                   ex: How to approach guide?"></textarea>

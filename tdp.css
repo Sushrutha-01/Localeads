@@ -1,0 +1,27 @@
+*{ 
+    margin: 0;
+    padding: 0;
+}
+body textare{
+    margin: 50px;
+    left: 70px;
+    background-color: rgb(106, 196, 212);
+}
+.contain{
+    background-color: white;
+    width:1300px;
+    padding:20px;
+    border-radius:20px;
+    box-shadow:0px 0px 15px 3px rgb(53,143,228);
+    margin-bottom: 20px;
+}
+.body1{
+    background-color:whitesmoke;
+    padding-left:10px;
+    padding:18px;
+    height:100%;
+}
+.image{
+    border-radius:10px;
+    padding-right:5px;
+}

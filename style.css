@@ -1,0 +1,42 @@
+body{
+    height:100px;
+    padding-bottom:10px;
+}
+.nav-link:hover{
+    text-decoration: underline;
+    font-weight: bold;
+}
+.navbar-nav{
+    padding-right: 10px;
+}
+.navbar{
+    margin-top:20px ;
+    margin-left:20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+.image{
+    width:100%;
+}
+.abc{
+    background-image: url('https://4kwallpapers.com/images/walls/thumbs_3t/2166.jpg');
+    background-size: cover;
+    height:650px;
+}
+.i1{
+    height:50px;
+    width:50px;
+}
+.home-container{
+    background-color:light;
+    height:200px;
+    width:700px;
+    padding-top:200px;
+}
+h1{
+    color:whitesmoke;
+}
+p{
+    color:white;
+}
